@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Promt y write</title>
+	<script>
+        
+var cadena = prompt('Escribe un numero');
+var num=parseInt(cadena, 10);
+var salida = "";
+var tick = false;
+for (var i = 1; i <= num; i++) {
+    if (i % 3 == 0) {
+        salida = salida + " Tick";
+        tick = true;
+    }
+    if (i % 5 == 0) {
+        salida = salida + " Tock";
+        tick = true;
+    }
+    if (tick == false) {
+        salida = `${salida} ${i}`;
+    }
+    if (i < num) {
+        salida = salida + ",";
+    }
+    tick = false;
+}
+
+document.write(salida);
+
+	</script>
+</head>
+<body>
+
+</body>
+
+
+</html>

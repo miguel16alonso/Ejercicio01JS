@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Promt y write</title>
+	<script>
+var cadena;
+var bandera = false;
+var resultado;
+var altura = 1;
+
+while (bandera == false) {
+    cadena = prompt('Escribe un numero 4-12');
+    var num = Number(cadena);
+    if (num >= 0) {
+        bandera = true;
+    }
+}
+
+for (var i = 0; i < num; i++, altura++) {
+    resultado = "";
+    for (var j = 0; j < altura; j++) {
+        document.write('*');
+        resultado += "*";
+    }
+   // console.log(resultado);
+    document.write(`<br>`);
+}
+	</script>
+</head>
+<body>
+
+</body>
+
+
+</html>

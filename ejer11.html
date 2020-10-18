@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Promt y write</title>
+    <script>
+var sc = prompt('Dime un numero');
+
+ var a = (int) ((Math.random() * 100)+1); // Número aleatorio de 1 a 100.
+ var b; // Número introducido por el usuario.
+ var i; // Contador para bucle for.
+
+ document.write("El juego consiste en averiguar un número secreto de 100 posibles.");
+
+ document.write("Tienes 5 intentos. Escribe un número entre 1 y 100: ");
+b=parseInt(sc, 10);
+
+ for (i=0; i<=4; i++) { 
+
+    // Primero se evalúa si se ha acertado.
+    
+    if (a == b) {  
+        document.write("¡Has acertado!"); 
+      break; } 
+    
+    // Luego da la partida por perdida si ya has gastado 5 intentos.     
+    
+    else if (i == 4) { 
+        document.write("Lo siento: ¡has perdido!. El número era el: " + a); 
+      break; } 
+    
+    // Si no es ninguno de los casos anteriores, comparamos números.
+    
+    else if (a > b) 
+    document.write("El número secreto es MAYOR que " + b);
+    else if (a < b)
+    document.write("El número secreto es MENOR que " + b);
+
+    // Por último un bucle if que sirve para dar una pista y avisarte de la última oportunidad.
+    
+    if (i <=1) { 
+        document.write("Otro intento: "); 
+     b = prompt('Dime un numero');} 
+    else if (i ==2) { 
+    var x =parseInt(a/10,10);
+    document.write("Una pista, la primera cifra es " + x);
+    document.write("Inténtalo de nuevo: ");
+    b = prompt('Dime un numero'); } 
+   else if (i >= 3) {
+    document.write("Oh, oh... ÚLTIMO intento: ");
+    b = prompt('Dime un numero'); }
+    }
+
+	</script>
+</head>
+<body>
+
+</body>
+
+
+</html>

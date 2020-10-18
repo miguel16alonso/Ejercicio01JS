@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Promt y write</title>
+	<script>
+var cadena = prompt('Escribe un numero');
+var num = parseInt(cadena,10);
+var pos1 = 0;
+var pos2 = cadena.length - 1;
+var mitad;
+var capi = true;
+var reves = "";
+var total = 0;
+
+document.write("El número " + num + " tiene " + cadena.length + "longitud");
+
+
+
+if (num % 2 == 0) {
+    mitad = cadena.length / 2;
+} else {
+    mitad = (cadena.length - 1) / 2;
+}
+for (var i = 0; i < mitad; i++) {
+    if (cadena.charAt(pos1) === cadena.charAt(pos2)) {
+
+    } else {
+        capi = false;
+    }
+    pos1++;
+    pos2--;
+}
+if (capi == true) {
+    document.write("El número " + num + " es Capicua");
+} else {
+    document.write("El número " + num + " no es Capicua");
+}
+
+for (var i = cadena.length - 1; i >= 0; i--) {
+    total = total + parseInt(cadena.charAt(i),10);
+    reves = reves + cadena.charAt(i);
+}
+document.write("Al reves es " + reves);
+document.write("El total de sumar sus cifras es " + total);
+	</script>
+</head>
+<body>
+
+</body>
+
+
+</html>

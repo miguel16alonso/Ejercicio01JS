@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Promt y write</title>
+	<script>
+
+var bandera = false;
+	var numero;
+	while (bandera == false) {
+		numero = prompt('Dime una palabra');
+		var n=parseInt(numero, 10);
+		if (numero !== ''){
+			if(typeof(n)==='number')//preguntar profesor
+			bandera = true;
+		}
+	}
+	document.write("<h1>"+numero+"</h1>");
+	</script>
+</head>
+<body>
+
+</body>
+
+
+</html>

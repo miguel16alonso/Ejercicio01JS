@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Promt y write</title>
+	<script>
+        
+var original = false;
+var bandera = false;
+var cadena = prompt('Introduce una catidad');
+var moneda = Number(cadena);
+
+while (original == false) {
+    origen = prompt('Divisa ORIGEN euro/dolar/libra/yen');
+    if (origen === "euro" || origen === "dolar" || origen === "libra" || origen === "yen") {
+        original = true;
+    }
+}
+while (bandera == false) {
+    destino = prompt('Divisa DESTINO euro/dolar/libra/yen');
+    if (origen === "euro" || origen === "dolar" || origen === "libra" || origen === "yen") {
+        bandera = true;
+    }
+}
+var resultado;
+if (origen === "dolar") {
+    resultado = moneda * 0.85;
+} else if (origen === "libra") {
+    resultado = moneda * 1.11;
+} else if (origen === "yen") {
+    resultado = moneda * 0.008;
+} else {
+    resultado = moneda
+}
+if (destino === "euro") {
+
+} else if (destino === "dolar") {
+    resultado = Math.round(resultado / 0.85);
+} else if (destino === "libra") {
+    resultado = Math.round(resultado / 1.11);
+} else if (destino === "yen") {
+    resultado = Math.round(resultado / 0.008);
+}
+alert(moneda + " " + origen + " son " + resultado + " " + destino);
+	</script>
+</head>
+<body>
+
+</body>
+
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Promt y write</title>
+	<script>
+var cadena = prompt('Escribe un anio');
+var num=parseInt(cadena, 10);
+if (num % 4 == 0) {
+    document.write(`<h1>Bisiesto</h1>`);
+} else if (num % 100 == 0) {
+    if (num % 400 == 0) {
+        document.write( `<h1>bisiesto</h1>`);
+    } else {
+        document.write(`<h1>No bisiesto</h1>`);
+    }
+} else {
+    document.write(`<h1>No bisiesto</h1>`);
+}
+	</script>
+</head>
+<body>
+
+</body>
+
+</html>

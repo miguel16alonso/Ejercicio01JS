@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Promt y write</title>
+	<script>
+        
+var temp;
+var check = false;
+while (check == false) {
+    temp = prompt('Los datos introducidos serán Celsius o Fahrenheit (C o F)');
+    if (temp === "C" || temp === "F") {
+        check = true;
+    }
+}
+var temper1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var temper2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var temp2;
+for (var i = 0; i < 10; i++) {
+    temper1[i] = prompt('Indique una temperatura');
+    if (temp === "C" || vtipo === "c") {
+        temper2[i] = (temper1[i] * 9 / 5) + 32;
+        temp2 = "F"
+    } else {
+        temper2[i] = (temper1[i] + 32) * 5 / 9;
+        temp2 = "C"
+    }
+}
+
+
+var cadena;
+
+for (var i = 0; i < 10; i++){
+
+    cadena+="<tr><td>"+temper1[i]+"</td><td>"+temper2[i]+"</td></tr>";
+}
+
+document.write(`<table border="solid">
+                    <tr>
+                        <td>${temp}</td>
+                        <td>${temp2}</td>
+                    </tr>`+
+                    cadena
+                    +
+                    `</table>`);
+	</script>
+</head>
+<body>
+
+</body>

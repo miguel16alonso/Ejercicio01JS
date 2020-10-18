@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Promt y write</title>
+	<script>
+var cadena;
+var bandera = false;
+var total;
+while (bandera == false) {
+    cadena = prompt('Dime un numero');
+    var num=parseInt(cadena, 10);
+    if (num >= 0) {
+        bandera = true;
+    }
+}
+
+num2 = num * 2;
+var altura = num2;
+for (var i = num2; i > 0; i--, altura--) {
+    total = "";
+    for (var h = num2; h > altura; h--) {
+        document.write('&nbsp &nbsp');
+        total += "  ";
+    }
+    for (var j = altura; j > 0; j--) {
+        document.write('&nbsp &nbsp' + "*" + '&nbsp');
+        total += "  * ";
+    }
+    document.write('<br>');
+}
+	</script>
+</head>
+<body>
+
+</body>
+
+
+</html>
